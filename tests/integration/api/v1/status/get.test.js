@@ -13,4 +13,5 @@ test("GET to /api/v1/status returns 200", async () => {
   expect(database.opened_connections).toBeDefined();
   expect(database.opened_connections).toEqual(1);
   expect(database.opened_connections).toBeLessThanOrEqual(database.max_connections);
+  expect(database.opened_connections).toBeGreaterThan(0);
 });
